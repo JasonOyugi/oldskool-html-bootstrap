@@ -2,14 +2,11 @@ const path = require('path');
 var glob = require('glob-all');
 const webpack = require('webpack');
 const HandlebarsPlugin = require('handlebars-webpack-plugin');
-const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const MinifyPlugin = require('babel-minify-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const mergeJSON = require('handlebars-webpack-plugin/utils/mergeJSON');
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 
 // Project config data.
@@ -53,6 +50,18 @@ const wPackConfig = {
   },
   output: {
     filename: paths.dist.js + '/[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    compress: true,
+    port: 8081,
+    hot: false,
+    liveReload: true,
+    watchFiles: ['src/**/*'],
   },
   devtool: 'source-map',
   mode: 'development',
@@ -75,14 +84,13 @@ const wPackConfig = {
         },
         {
           loader: 'sass-loader',
-          // options: {
-          //     sourceMap: true,
-          //     sassOptions: {
-          //         indentWidth: 4,
-          //         outputStyle: 'expanded',
-          //         sourceComments: true
-          //     }
-          // }
+          options: {
+            sassOptions: {
+              quietDeps: true,
+              verbose: false,
+              silenceDeprecations: ['import', 'global-builtin', 'slash-div', 'color-functions']
+            }
+          }
         },
       ],
     }, ]
@@ -98,19 +106,12 @@ const wPackConfig = {
       }
     },
     minimizer: [
-      new OptimizeCssAssetsPlugin({
-        cssProcessorOptions: {
-          map: {
-            inline: false,
-          },
-        },
-        cssProcessorPluginOptions: {
+      new CssMinimizerPlugin({
+        minimizerOptions: {
           preset: [
             'default',
             {
-              discardComments: {
-                removeAll: true,
-              },
+              discardComments: { removeAll: true },
             },
           ],
         },
@@ -152,7 +153,7 @@ const wPackConfig = {
     }),
     new HandlebarsPlugin({
       entry: path.join(process.cwd(), 'src', 'html', '**', '*.html'),
-      output: path.join(process.cwd(), 'dist', '[path]', '[name].html'),
+      output: path.join(process.cwd(), 'dist', '[name].html'),
       partials: [path.join(process.cwd(), 'src', 'partials', '**', '*.{html,svg}')],
       data: projectData,
       helpers: {
@@ -179,11 +180,9 @@ const wPackConfig = {
         }
       },
       onBeforeSave: function (Handlebars, res, file) {
-        const elem = file.split('//').pop().split('/').length;
-        return res.split('{{webRoot}}').join('.'.repeat(elem));
+        return res.split('{{webRoot}}').join('.');
       },
     }),
-    new FixStyleOnlyEntriesPlugin(),
     new MiniCssExtractPlugin({
       filename: paths.dist.css + '/[name].bundle.css',
     }),
