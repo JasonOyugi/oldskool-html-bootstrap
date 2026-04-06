@@ -28,25 +28,25 @@
             "small-title": "Ready to Sell?",
             "large-title": "Harvest/Haulage Services",
             "button-text": "Contract Now",
-            "img": "{{webRoot}}/assets/images/categories/category-5.jpg"
+            "img": "https://thumbs.dreamstime.com/b/harvester-working-forest-harvest-timber-firewood-as-renewable-energy-source-agriculture-forestry-theme-89891298.jpg"
         },
         {
             "small-title": "20% Off",
             "large-title": "Indigenous Plants",
             "button-text": "Shop Now",
-            "img": "{{webRoot}}/assets/images/categories/category-6.jpg"
+            "img": "https://upload.wikimedia.org/wikipedia/commons/f/f4/2013-05-04_17_18_04_Stunted_white_oak_saplings_beneath_the_large_white_oak_near_the_tributary_to_the_West_Branch_Shabakunk_Creek_between_Walton_and_Farrell_Avenues.jpg"
         },
         {
             "small-title": "Quality Assurance",
             "large-title": "Forestry Management",
             "button-text": "Contract Now",
-            "img": "{{webRoot}}/assets/images/categories/category-1.jpg"
+            "img": "https://fsc.org/sites/default/files/styles/marquee_image/public/2025-06/Zland%20bark%20stripping%202_0.jpg?itok=9j5OzxoQ"
         },
         {
             "small-title": "Climate Friendly",
             "large-title": "Plant for the Environment",
             "button-text": "Shop Now",
-            "img": "{{webRoot}}/assets/images/categories/category-8.jpg"
+            "img": "https://images.pexels.com/photos/13035525/pexels-photo-13035525.jpeg?_gl=1*a1ik4a*_ga*MTY0Mjg2MTg2Mi4xNzczMDMyNTg3*_ga_8JE65Q40S6*czE3NzU0ODcyODAkbzMkZzAkdDE3NzU0ODcyODAkajYwJGwwJGgw"
         }
     ]
 }
