@@ -1,50 +1,50 @@
 {
     "entries": [
         {
-            "small-title": "Must Haves",
-            "large-title": "Premium Essentials",
+            "small-title": "Premium Hardwoods",
+            "large-title": "Eucalyptus Clones",
             "button-text": "Shop Now",
-            "img": "{{webRoot}}/assets/images/categories/category-7.jpg"
+            "img": "https://static01.nyt.com/images/2012/11/06/science/06OBTREE/06OBTREE-superJumbo.jpg"
         },
         {
-            "small-title": "Curated Selection",
-            "large-title": "Our Favourites",
-            "button-text": "Shop Now",
-            "img": "{{webRoot}}/assets/images/categories/category-2.jpg"
+            "small-title": "Ensure Success",
+            "large-title": "Planting Services",
+            "button-text": "Contract Now",
+            "img": "https://www.tnnursery.net/cdn/shop/files/Virginia_Pine_Seedlings_For_Sale.png?v=1768513820"
         },
         {
-            "small-title": "Streetwear Basics",
-            "large-title": "T-Shirts & Shirts",
+            "small-title": "Premium Softwoods",
+            "large-title": "Pine Hybrids",
             "button-text": "Shop Now",
-            "img": "{{webRoot}}/assets/images/categories/category-3.jpg"
+            "img": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Pinus_ponderosa_15932.JPG"
         },
         {
-            "small-title": "Waterproof & Lightweight",
-            "large-title": "Jackets & Coats",
+            "small-title": "For the Drylands",
+            "large-title": "Melia Volkensii",
             "button-text": "Shop Now",
-            "img": "{{webRoot}}/assets/images/categories/category-4.jpg"
+            "img": "https://www.gatsbyafrica.org.uk/app/uploads/2023/06/picture1-1.jpg"
         },
         {
-            "small-title": "Keep Warm",
-            "large-title": "Hats & Beanies",
-            "button-text": "Shop Now",
+            "small-title": "Ready to Sell?",
+            "large-title": "Harvest/Haulage Services",
+            "button-text": "Contract Now",
             "img": "{{webRoot}}/assets/images/categories/category-5.jpg"
         },
         {
             "small-title": "20% Off",
-            "large-title": "Summer Sale",
+            "large-title": "Indigenous Plants",
             "button-text": "Shop Now",
             "img": "{{webRoot}}/assets/images/categories/category-6.jpg"
         },
         {
-            "small-title": "Just Arrived",
-            "large-title": "Latest Kicks",
-            "button-text": "Shop Now",
+            "small-title": "Quality Assurance",
+            "large-title": "Forestry Management",
+            "button-text": "Contract Now",
             "img": "{{webRoot}}/assets/images/categories/category-1.jpg"
         },
         {
-            "small-title": "Accessories",
-            "large-title": "Bags & Rugsacks",
+            "small-title": "Climate Friendly",
+            "large-title": "Plant for the Environment",
             "button-text": "Shop Now",
             "img": "{{webRoot}}/assets/images/categories/category-8.jpg"
         }
